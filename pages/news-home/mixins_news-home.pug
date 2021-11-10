@@ -1,0 +1,15 @@
+mixin itemNews(obj)
+    each n in obj
+        .product__news-item
+            +img(n.src, n.alt)
+            .product__news-desc
+                .product__date
+                    span= n.date
+                .product__title 
+                    +link(linkDetail)
+                        span= n.title
+                .product__content
+                    +link(linkDetail) 
+                        p= n.content
+                +link.read-more 
+                    span Đọc tiếp

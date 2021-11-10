@@ -1,0 +1,138 @@
+.product
+    max-width: 1140px
+    margin: 55px auto
+    @include maxWidth($tablet)
+        margin: 55px 20px
+    @include maxWidth($mobile)
+        margin: 55px 10px
+    h2
+        @include text($font-size: 16px, $font-weight: 600, $line-height: 20px)
+        color: $primary-color
+        @include fontRoboto
+        position: relative
+        -webkit-position: relative
+        -moz-position: relative
+        -ms-position: relative
+        -o-position: relative
+    h2::before
+        content: ""
+        @include position($position: absolute, $top: 35px, $left: 0)
+        background-color: $primary-color
+        width: 135px
+        height: 3px
+    .row
+        @include maxWidth($mobile)
+            row-gap: 20px
+        @include maxWidth($mobile-plus)
+            row-gap: 20px
+    &__container
+        padding: 0
+        margin: 0
+        max-width: 1140px
+    &__list
+        column-gap: 15px
+    &__item
+        @include flex($flex-direction: column, $align-items: center)
+        row-gap: 40px
+        @include maxWidth($tablet)
+            row-gap: 20px 
+        &-lg
+            max-width: 555px
+            border: 1px solid $boder-item-color
+            position: relative
+            -webkit-position: relative
+            -moz-position: relative
+            -ms-position: relative
+            -o-position: relative
+    &__img  
+        opacity: 1
+        transition: .5s ease
+        img
+            max-width: 100%
+            height: auto
+    .label-item
+        @include position($position: absolute,$top: 15px, $left: 15px)
+        span
+            display: block
+            width: 50px
+            height: 50px
+            @include text($font-size: 14px, $line-height: 20px)
+            @include flex($flex-direction: row, $justify-content: center, $align-items: center)
+            color: $white-color
+            padding: 20px
+            border-radius: 50%
+            background: $primary-color
+            text-transform: uppercase
+    .overlay
+        @include flex($flex-direction: row, $justify-content: center, $align-items: center)
+        column-gap: 10px
+        @include position($position: absolute, $top: 35%, $left: 27%)
+        transition: .5s ease
+        opacity: 0
+        span
+            color: $white-color
+            @include text($font-size: 13px, $line-height: 20px)
+            padding: 15px 40px
+            background: $primary-color
+            text-transform: uppercase
+            border-radius: 30px 
+        i
+            color: $search-color
+            @include text($font-size: 12px, $line-height: 0)
+            padding: 15px
+            border-radius: 50%
+            background: $white-color
+    &__item-lg:hover img
+                opacity: 0.6
+    &__item-lg:hover .overlay
+                opacity: 1
+    &__desc
+        @include fontRoboto
+        margin: 25px 0
+        text-align: center
+        span
+            @include text ($font-size: 16px, $line-height: 20px)
+            color: $text-color
+            margin-bottom: 10px
+            display: block
+    &__rate
+        margin-bottom: 10px
+        i
+            color: $star-color
+            @include text ($font-size: 14px, $line-height: 20px)
+    &__price
+        @include flex ($flex-direction: row, $justify-content: center)
+        column-gap: 10px
+        .new-price
+            span
+                @include text ($font-size: 18px, $font-weight: 500, $line-height: 20px)
+                color: $new-price-color
+        .old-price
+            span
+                @include text ($font-size: 14px, $line-height: 20px)
+                color: $old-price-color
+                text-decoration: line-through
+    &__item-sm
+        @include flex($flex-direction: row)
+        column-gap: 31px
+        @include maxWidth($tablet)
+            column-gap: 15px
+    &__item-child
+        max-width: 262px
+        border: 1px solid $boder-item-color
+        position: relative
+        -webkit-position: relative
+        -moz-position: relative
+        -ms-position: relative
+        -o-position: relative
+        .overlay
+            @include position($position: absolute, $top: 25%, $right: 18%)
+            span
+                display: block
+                padding: 10px
+            @include maxWidth($tablet)
+                @include position($position: absolute, $top: 25%, $right: 5%)
+        &:hover img
+            opacity: 0.6
+        &:hover .overlay
+            opacity: 1

@@ -1,0 +1,39 @@
+.ads
+    max-width: 1140px
+    margin: 0 auto
+    img
+        max-width: 100%
+        height: auto
+
+.product-new
+    .product
+        &__new-list
+            padding: 0 10px
+            column-gap: 30px
+            row-gap: 30px
+        &__prd-item
+            width: calc(25% - 22.5px)
+            padding: 0
+            border: 1px solid $boder-item-color
+            position: relative
+            -webkit-position: relative
+            -moz-position: relative
+            -ms-position: relative
+            -o-position: relative
+            @include maxWidth($tablet)
+                width: calc(33.333% - 20px)
+            @include maxWidth($mobile)
+                width: 100%
+            .overlay
+                @include position($position: absolute, $top: 25%, $left: 18%)
+                span
+                    display: block
+                    padding: 10px
+                    @include maxWidth($mobile)
+                        padding: 15px 25px
+                @include maxWidth($mobile)
+                    @include position($position: absolute, $top: 25%, $right: 25%)
+            &:hover img
+                opacity: 0.6
+            &:hover .overlay
+                opacity: 1

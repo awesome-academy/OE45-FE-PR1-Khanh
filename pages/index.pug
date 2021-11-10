@@ -1,0 +1,15 @@
+extends layout/layout
+
+include ./product-hot/product-hot
+
+include ./product-buys-sale/product-buys-sale
+
+include ./product-new/product-new
+
+include ./news-home/news-home
+
+block main 
+    +product-hot
+    +product-buys-sale
+    +product-new
+    +news-home

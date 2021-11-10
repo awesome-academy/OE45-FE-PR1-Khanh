@@ -1,0 +1,7 @@
+mixin img(src, alt)
+    img(src=src, alt=(alt ? alt : ""))&attributes(attributes)
+
+mixin link(href)
+    a(href=(href ? href : "javascript:void(0)"))&attributes(attributes)
+        if block 
+            block
