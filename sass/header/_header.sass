@@ -1,0 +1,258 @@
+.header
+    &__container
+        background-image: url('../../assets/bg1.png')
+        max-width: 100%
+        background-repeat: no-repeat
+        background-size: cover
+    &__head
+        width: 100%
+        height: 32px
+        background: $bg-header
+        @include maxWidth($mobile)
+            display: none
+        &-container
+            max-width: 1140px
+            height: 100%
+            margin: 0 auto
+            @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+            @include maxWidth($tablet)
+                padding: 0 20px
+    &__social
+        &-list
+            @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+            li  
+                padding: 9px 15px
+                border-right: 1px solid $social-boder-color
+                a
+                    color: $social-color
+                    @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+                    @include text($font-size: 13px)
+                    column-gap: 5px 
+            li:first-child
+                padding-right: 30px
+                padding-left: unset
+    &__user
+        &-list
+            @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+            li
+                padding: 9px
+                border-right: 1px solid $social-boder-color
+                a
+                    color: $social-color
+                    @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+                    @include text($font-size: 13px)
+                    column-gap: 5px 
+                    &:hover
+                        filter: brightness(90%)
+    &__main
+        &-container
+            max-width: 1140px
+            height: auto
+            margin: 0 auto
+            @include maxWidth($tablet)
+                padding: 10px 20px
+            @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+    &__logo
+        @include maxWidth($tablet)
+            flex: 1
+        @include maxWidth($mobile)
+            padding: 20px 0
+            background-image: url(../../assets/logo-mobile.png)
+            background-repeat: no-repeat
+            max-width: 221px
+            height: 70px
+            margin: 30px auto 
+        img
+            max-width: 100%
+            height: auto
+            @include maxWidth($mobile)
+                display: none
+    &__utilities
+        @include maxWidth($mobile)
+            display: none
+        @include maxWidth($tablet)
+            flex: 1
+        h2
+            color: $utilities-color
+            padding-bottom: 10px
+            margin-left: 30px
+            i
+                @include text($font-size: 14px, $line-height: 20px)
+                @include flex($flex-direction: row, $align-items: center)
+                column-gap: 5px
+        &-list
+            @include fontRoboto
+            @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+            column-gap: 10px
+    &__search
+        position: relative  
+        -webkit-position: relative
+        -moz-position: relative
+        -ms-position: relative
+        -o-position: relative
+        input
+            padding: 11px 70px 11px 25px
+            width: 400px
+            outline: none
+            border: none
+            border-radius: 50px
+            border-right: 1px
+            @include text($font-size: 14px)
+            @include maxWidth($tablet)
+                width: 360px
+            @include maxWidth($mobile)
+                width: 250px
+        .icon-search
+            padding: 6px 20px
+            border-left: 1px solid $icon-search-boder
+            @include position(absolute, 5px, 0)
+            color: $icon-search-color
+            &:hover
+                cursor: pointer
+    &__cart 
+        @include flex($flex-direction: row, $align-items: center)
+        column-gap: 5px
+        .icon-cart
+            color: $icon-cart-color   
+            @include text($font-size: 21px,$line-height: 20px) 
+            &:hover
+                cursor: pointer
+        span
+            @include text($font-size: 15px, $line-height: 20px)  
+            width: 80px
+            display: block
+    &__menu
+        background: $primary-color
+        width: 100%
+        height: 50px
+        .nav__pc
+            @include maxWidth($tablet)
+                padding: 0 20px
+            @include maxWidth($mobile)
+                display: none
+            @include flex($flex-direction: row, $align-items: center)
+            max-width: 1140px
+            margin: 0 auto
+            position: relative
+            -webkit-position: relative
+            -moz-position: relative
+            -ms-position: relative
+            -o-position: relative
+            height: 100%
+            i
+                @include text($font-size: 21px)
+                color: $white-color
+                margin-right: 10px
+                &:hover
+                    cursor: pointer
+            .nav__list
+                @include flex($flex-direction: row , $align-items: center)
+                li
+                    position: relative
+                    -webkit-position: relative
+                    -moz-position: relative
+                    -ms-position: relative
+                    -o-position: relative
+                    padding: 0 20px
+                    @include maxWidth($tablet)
+                    padding: 0 12px
+                    a
+                        @include text($font-size: 14px, $line-height: 50px)
+                        text-transform: uppercase
+                        color: $white-color
+                        @include flex($flex-direction: row , $align-items: center)
+                    ul  
+                        display: none
+                        @include position($position: absolute, $top: 100%, $left: 0)
+                        background: $primary-color
+                        min-width: 180px
+                        li  
+                            padding: 0 20px
+                            &:hover
+                                background: $foreign-color
+                    &:hover > ul
+                        display: inline-block
+                        z-index: 10
+                    &:hover
+                        background: $foreign-color          
+                    &.active
+                        background: $foreign-color !important
+        .nav__mobile
+            display: none
+            @include maxWidth($mobile)
+                padding: 0 10px
+                display: block
+                @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+                height: 100%
+                .menu-icon
+                    @include text($font-size: 30px)
+                    color: $white-color
+                .nav__menu
+                    @include position($position: fixed, $top: -100%, $left: 0)
+                    background-color: $primary-color
+                    width: 100%
+                    padding: 30px 0
+                    transition: 0.4s
+                    z-index: 100
+                    color: $white-color
+                    ul
+                        @include flex($flex-direction: column, $align-items: center)
+                        row-gap: 20px
+                        a
+                            text-transform: uppercase
+                            color: $white-color
+                    .nav__close
+                        @include position($position: absolute , $top: 20px, $left: 20px )
+                        font-size: 21px
+                .menu-icon:hover ~ .nav__menu
+                    top: 0
+                .nav__utilities
+                    position: relative
+                    -webkit-position: relative
+                    -moz-position: relative
+                    -ms-position: relative
+                    -o-position: relative
+                    @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+                    column-gap: 10px
+                    .nav__search
+                        position: relative  
+                        -webkit-position: relative
+                        -moz-position: relative
+                        -ms-position: relative
+                        -o-position: relative
+                        input
+                            padding: 11px 70px 11px 25px
+                            width: 200px
+                            outline: none
+                            border: none
+                            border-radius: 50px
+                            border-right: 1px
+                            @include text($font-size: 14px)
+                        .icon-search
+                            padding: 6px 20px
+                            border-left: 1px solid $icon-search-boder
+                            @include position($position: absolute, $top: 5px, $right: 0)
+                            color: $icon-search-color
+                            &:hover
+                                cursor: pointer
+                    .nav__cart
+                        @include flex($flex-direction: row, $align-items: center)
+                        column-gap: 5px
+                        .icon-cart
+                            @include text($font-size: 30px, $line-height: 20px)                             
+                            color: $white-color  
+    #slide-pc
+        .carousel-inner
+            img
+                max-width: 100%
+                height: auto
+        @include maxWidth($mobile)
+            display: none
+    #slide-mobile
+        display: none 
+        @include maxWidth($mobile)
+            overflow: hidden
+            display: block !important
+            .carousel-inner
+                img
+                    width: 414px

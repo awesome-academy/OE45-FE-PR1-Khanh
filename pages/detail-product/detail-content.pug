@@ -1,0 +1,65 @@
+mixin detail-content
+    +breadcrumb-page(detailBreadcrumb)
+    .wrapper-detail
+            .container-sm.product__detail-container
+                .row.product__detail
+                    .product__detail-img.col-md-5
+                        +imgDetail(imgDetail)
+                    .product__detail-desc.col-md-7
+                        .product__detail-name
+                            span Cây Dạ Lam
+                        .product__detail-rate
+                            +rating(5)
+                        .product__detail-price 
+                            .new-price 
+                                span 4.099.000 đ
+                            .old-price
+                                span 4.099.000 đ
+                        hr
+                        .product__detail-content 
+                            p Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình 0,8 - 1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15 - 20cm. Lá có màu xanh đậm ở mặ trên, quanh gân lá có màu trắng sữa, mặt dưới là nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+                        hr
+                        .product__detail-quantity
+                            span Số lượng
+                            .quantity 
+                                button(type="button")
+                                    i.ri-subtract-line
+                                span 1
+                                button(type="button") 
+                                    i.ri-add-line
+                        hr
+                        .product__detail-utilities
+                            +link('cart-product.html') Mua ngay
+                            +link('detail-product.html')
+                                i.ri-search-line
+                            +link()
+                                i.ri-heart-fill
+                        .product__detail-social
+                            +social(itemSocials)
+            +tabsBtn(tabsBtn)
+            .tab-content#nav-tabContent
+                +contentTabs(contentTabOnes, 1)
+                +contentTabs(contentTabTows)
+                    +comment(comment)
+                    .write-comment 
+                        .container-sm
+                            h2.mb-5 Viết bình luận:
+                            form(action="#" method="#")
+                                .row.g-3
+                                    .col-md-4.col-sm-12
+                                        input(type="text" placeholder="Họ và Tên" aria-label="Họ và Tên").form-control 
+                                    .col-md-4.col-sm-12
+                                        input(type="text" placeholder="Email" aria-label="Email").form-control
+                                    .col-md-4.col-sm-12
+                                        input(type="text" placeholder="Phone" aria-label="Phone").form-control
+                                .row.mt-3 
+                                    .col-md-12.col-sm-12
+                                        input(type="text" placeholder="Bình luận" aria-label="Bình luận").form-control.form-comment 
+                                button(type="button").mt-3 GỬI
+                +contentTabs(contentTabThrees, 3)
+            section.product-similar.product
+                h2 Sản phẩm tương tự
+                hr
+                .container-sm.product__similar-container 
+                    .row.product__similar-list
+                        +productItem(similarProducts)

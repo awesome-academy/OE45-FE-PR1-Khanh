@@ -1,0 +1,115 @@
+mixin header 
+    header.header 
+        .header__container
+            .header__head
+                .header__head-container
+                    .header__social 
+                        ul.header__social-list
+                            +itemSocial('Open time: 8:00 - 18:00 Monday - Sunday')
+                                i.ri-time-line
+                            +itemSocial()
+                                i.ri-facebook-fill
+                            +itemSocial()
+                                i.ri-twitter-fill
+                            +itemSocial()
+                                i.ri-vimeo-fill
+                            +itemSocial()
+                                i.ri-youtube-fill
+                    .header__user 
+                        ul.header__user-list
+                            +itemSocial('Đăng nhập')
+                                i.ri-user-fill
+                            +itemSocial('Đăng ký')
+                                i.ri-user-add-line
+            .header__main
+                .header__main-container
+                    .header__logo
+                        +link('index.html')
+                            +img('../../assets/logo.png', 'logo')
+                    .header__utilities 
+                        h2 
+                            i.ri-phone-fill HỖ TRỢ: (04) 6674 2332 - (04) 3786 8904
+                        .header__utilities-list
+                            .header__search 
+                                input(type="text" placeholder="Tìm kiếm...")
+                                i.ri-search-line.icon-search 
+                            .header__cart 
+                                +link
+                                    i.ri-luggage-cart-line.icon-cart
+                                span 0 sản phẩm
+            .header__menu 
+                nav.nav__pc
+                    i.ri-menu-line
+                    ul.nav__list 
+                        +itemMenu('trang chủ','active')
+                        +itemMenu('giới thiệu', )
+                        +itemMenu('sản phẩm', null,'list-all-product.html')
+                            i.ri-arrow-drop-down-fill
+                            ul 
+                                +itemMenu('Cây danh dự')
+                                +itemMenu('Cây chân chim') 
+                                +itemMenu('Cây cỏ ta') 
+                        +itemMenu('sản phẩm mới')
+                            i.ri-arrow-drop-down-fill
+                            ul 
+                                +itemMenu('Cây danh dự')
+                                +itemMenu('Cây xương rồng') 
+                                +itemMenu('Cây dạ lam') 
+                        +itemMenu('tin tức')
+                        +itemMenu('liên hệ')
+                nav.nav__mobile
+                    .menu-icon
+                        i.ri-menu-line
+                    .nav__menu#nav-menu
+                        ul 
+                            +itemMenu('Trang chủ',null,'index.html')
+                            +itemMenu('giới thiệu')
+                            +itemMenu('sản phẩm')
+                            +itemMenu('sản phẩm mới')
+                            +itemMenu('tin tức')
+                            +itemMenu('liên hệ')
+                        .nav__close#nav-close
+                            i.ri-close-line
+                    .nav__utilities
+                        .nav__search 
+                            input(type="text" placeholder="Tìm kiếm...")
+                            i.ri-search-line.icon-search 
+                        .nav__cart 
+                            +link()
+                                i.ri-luggage-cart-line.icon-cart
+            #slide-pc.carousel.slide(data-bs-ride="carousel")
+                .carousel-indicators
+                    button(type="button" data-bs-target="#slide-pc" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                    button(type="button" data-bs-target="#slide-pc" data-bs-slide-to="1" aria-label="Slide 2")
+                    button(type="button" data-bs-target="#slide-pc" data-bs-slide-to="2" aria-label="Slide 3")
+                .carousel-inner
+                    .carousel-item.active 
+                        +img("assets/slide.png","slide1")
+                    .carousel-item
+                        +img("assets/slide.png","slide2")
+                    .carousel-item
+                        +img("assets/slide.png","slide3")
+                button.carousel-control-prev(type="button" data-bs-target="#slide-pc" data-bs-slide="prev")
+                    span.carousel-control-prev-icon(aria-hidden="true")
+                    span.visually-hidden Previous
+                button.carousel-control-next(type="button" data-bs-target="#slide-pc" data-bs-slide="next")
+                    span.carousel-control-next-icon(aria-hidden="true")
+                    span.visually-hidden Next
+            #slide-mobile.carousel.slide(data-bs-ride="carousel")
+                .carousel-indicators
+                    button(type="button" data-bs-target="#slide-mobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                    button(type="button" data-bs-target="#slide-mobile" data-bs-slide-to="1" aria-label="Slide 2")
+                    button(type="button" data-bs-target="#slide-mobile" data-bs-slide-to="2" aria-label="Slide 3")
+                .carousel-inner
+                    .carousel-item.active 
+                        +img("assets/slide-mobile.png","slide1")
+                    .carousel-item
+                        +img("assets/slide-mobile.png","slide2")
+                    .carousel-item
+                        +img("assets/slide-mobile.png","slide3")
+                button.carousel-control-prev(type="button" data-bs-target="#slide-mobile" data-bs-slide="prev")
+                    span.carousel-control-prev-icon(aria-hidden="true")
+                    span.visually-hidden Previous
+                button.carousel-control-next(type="button" data-bs-target="#slide-mobile" data-bs-slide="next")
+                    span.carousel-control-next-icon(aria-hidden="true")
+                    span.visually-hidden Next

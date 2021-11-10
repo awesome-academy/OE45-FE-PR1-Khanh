@@ -1,0 +1,296 @@
+mixin img(src, alt)
+    img(src=src, alt=(alt ? alt : ""))&attributes(attributes)
+
+mixin link(href)
+    a(href=(href ? href : "javascript:void(0)"))&attributes(attributes)
+        if block 
+            block
+
+mixin itemSocial(item,href)
+    li 
+        +link(href)
+            if block
+                block
+            = item
+
+mixin itemMenu(item,active,href)
+    li(class= active ? active : "")
+        +link(href)= item
+            if block 
+                block
+
+mixin itemProduct(src, alt, label, linkBuy, linkDetail, linkDetail, nameProduct, newPrice, oldPrice)
+    .product__img 
+        +img(src, alt)
+    if label
+        .label-item
+            span= label 
+    else 
+        .label-item
+    .overlay 
+        +link(linkBuy) 
+            span Mua ngay
+        +link(linkDetail)
+            i.ri-search-line
+    .product__desc
+        +link(linkDetail)
+            span= nameProduct
+        .product__rate
+            i.ri-star-fill
+            i.ri-star-fill
+            i.ri-star-fill
+            i.ri-star-fill
+            i.ri-star-half-fill
+        .product__price 
+            .new-price
+                span= newPrice
+            .old-price  
+                span= oldPrice
+
+mixin productItem(itemsProduct)
+    each item in itemsProduct
+        .product__prd-item
+            .product__img 
+                +img(item.src, item.alt)
+            if item.label
+                .label-item
+                    span= item.label 
+            else 
+                .label-item
+            .overlay 
+                +link('cart.html') 
+                    span Mua ngay
+                +link('detail.html')
+                    i.ri-search-line
+            .product__desc
+                +link('detail.html')
+                    span= item.nameProduct
+                .product__rate
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-half-fill
+                .product__price 
+                    .new-price
+                        span= item.newPrice
+                    .old-price  
+                        span= item.oldPrice
+
+mixin itemNews(itemNews)
+    each item in itemNews
+        .product__news-item
+            +img(item.src, item.alt)
+            .product__news-desc
+                .product__date
+                    span= item.date
+                .product__title 
+                    +link(linkDetail)
+                        span= item.title
+                .product__content
+                    +link(linkDetail) 
+                        p= item.content
+                +link.read-more 
+                    span Đọc tiếp
+
+mixin menuList(itemMenu) 
+    each item in itemMenu
+        .accordion-item
+            h2.accordion-header(id = item.heading_id class= item.active)
+                i.ri-arrow-right-s-line
+                button(type="button" data-bs-toggle="collapse" data-bs-target= `#${item.collapse_id}` aria-expanded="true" aria-controls= item.collapse_id)= item.category
+            .accordion-collapse.collapse.show(aria-labelledby= item.heading_id data-bs-parent="#accordionExample" id= item.collapse_id)
+                each n in item.product
+                    .accordion-body
+                        +link('product-detail.html')= n
+
+mixin menuPrice(itemPrice)
+    each price in itemPrice
+        .accordion-item
+            h2.accordion-header(id = price.heading_id)
+                i.ri-arrow-right-s-line
+                button(type="button" data-bs-toggle="collapse" data-bs-target= `#${price.collapse_id}` aria-expanded="true" aria-controls= price.collapse_id)= price.price
+
+mixin menuColor(itemColor)
+    each item in itemColor
+        .color__item
+            span(class= item.color) 
+            +link= item.nameColor
+
+mixin itemList(itemList)
+    each item in itemList
+        .product__list-item
+            .product__list-img
+                +img(item.src, item.alt) 
+            .product__list-desc 
+                .product__list-name
+                    +link('detail-product.html')
+                        span= item.nameProduct
+                .product__list-rate
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-half-fill
+                .product__list-content
+                    p= item.contentProduct 
+                .product__list-price 
+                    span= item.priceProduct
+                .product__list-utilities
+                    +link('cart-product.html') Mua ngay
+                    +link('detail-product.html')
+                        i.ri-search-line
+                    +link()
+                        i.ri-heart-fill
+
+mixin breadcrumb-page(nameBreadcrumb)
+    nav(aria-label="breadcrumb")#breadcrumb
+            ol.breadcrumb
+                li.breadcrumb-item
+                    +link Home
+                each items in nameBreadcrumb
+                    li.breadcrumb-item.active(aria-current="page")= items
+
+mixin imgDetail(imgDetail)
+    each item in imgDetail
+        .img-parent
+            +img(item.src, item.alt)
+        .img-child 
+            each items in item.imgChild 
+                +img(items.src, items.alt)
+
+mixin social(itemSocials)
+    each item in itemSocials
+        +link()
+            i(class = item.icon)
+            span= item.label
+
+mixin tabsBtn(tabsBtn)
+    nav 
+        .nav.nav-tabs#nav-tab(role="tablist")
+            each item in tabsBtn
+                button.nav-link(id= item.id data-bs-toggle="tab" data-bs-target= `#${item.controls}` type="button" role="tab" aria-controls= item.controls aria-selected= item.selected)= item.nameBtn
+
+mixin contentTabs(contentTabs, numTab)
+    each item in contentTabs
+        .tab-pane.fade(id= item.id class= item.class role="tabpanel" aria-labelledby= item.label)
+            if numTab == 1
+                each items in item.contentShort
+                    span= items
+                p= item.contentLong
+            if numTab == 3
+                each items in item.content
+                    +link()
+                        p= items
+            if block
+                block
+
+mixin comment(comment)
+    section.gradient-custom
+        .container.my-5
+            .row.d-flex
+                .col-md-12
+                    .card
+                        .card-body.p-4
+                            h4.text-center.mb-4.pb-2 Bình luận (3)
+                            .row
+                                .col
+                                    each item in comment
+                                        .d-flex.flex-start.mb-5
+                                            +img(item.src, item.alt)(width= "65", height= "65").rounded-circle.shadow-1-strong.me-3
+                                            .flex-grow-1.flex-shrink-1
+                                                .d-flex.justify-content-between.align-items-center
+                                                    p.nameUser.mb-3= item.nameUser
+                                                    +link().reply
+                                                        i.ri-reply-line
+                                                        span Trả lời
+                                                p.small.mb-4= item.content
+                                                p.date-time= item.date
+                                                hr
+
+mixin rating(num)
+    each item in [1, 2, 3, 4, 5]
+        if item <= num
+            i.ri-star-fill
+
+mixin cartBody(cartBody)
+    each item in cartBody 
+        tr
+            td.image
+                +img(item.src, item.alt)
+            td.name 
+                span= item.nameProduct
+            td.price 
+                span= item.priceProduct
+            td.quantity
+                span= item.qtyProduct
+            td.total-price 
+                span= item.totalPrice
+            td.delete 
+                button(type="button")
+                    i.ri-delete-bin-line
+
+mixin navNews(navNews)
+    each item in navNews
+        .nav__news-items
+            +img(item.src, item.alt)
+            .nav__news-desc
+                p= item.newsDesc
+
+mixin blogTags(blogTags)
+    each item in blogTags 
+        span= item
+
+mixin itemNewLists(itemNewLists)
+    each item in itemNewLists 
+        .news__list-item
+            h2.title= item.title
+            .news__list-info
+                .news-date
+                    i.ri-calendar-line 
+                    span= item.date
+                .news-time
+                    i.ri-time-line 
+                    span= item.time
+                .news-comment 
+                    i.ri-message-3-line
+                    span= item.comment
+            +link('detail-news.html')
+                +img(item.src, item.alt)
+            if item.contentOne
+                .news__list-desc
+                    +link('detail-news.html')
+                        p= `${item.desc} + ${item.contentOne}`
+                +img(item.srcTwo, item.altTwo)
+                .news__list-desc 
+                    p= item.contentTwo
+            .news__list-desc
+                +link('detail-news.html')
+                    p= item.desc
+
+mixin pagination(paginations)
+    nav(aria-label="Page navigation example").pagination
+        ul.pagination
+            each item in paginations 
+                li.page-item
+                    +link().page-link= item
+
+mixin inputForm(inputForm)
+    each item in inputForm
+        if item.label && item.id !== 'field'
+            label(for= item.id).form-label= item.label
+                if item.icon
+                    i.ri-asterisk
+            input(type= item.type, name= item.id, id= item.id, autocomplete="off", placeholder= item.placeholder).form-control
+        else if item.id !== 'field'
+            input(type= item.type, name= item.id, id= item.id, autocomplete="off", placeholder= item.placeholder).form-control
+
+mixin textareaForm(textareaForm)
+    each item in textareaForm
+        if item.label && item.id == 'field'
+            label(for= item.id).form-label= item.label
+                if item.icon
+                    i.ri-asterisk
+            textarea(rows="3", type= item.type, name= item.id, id= item.id, autocomplete="off", placeholder= item.placeholder).form-control
+        else if !item.label && item.id == 'field'
+            textarea(rows="3", type= item.type, name= item.id, id= item.id, autocomplete="off", placeholder= item.placeholder).form-control

@@ -1,0 +1,79 @@
+.breadcrumb
+    width: 100%
+    max-width: 1140px
+    margin:  20px auto
+    @include maxWidth($tablet)
+        padding: 0 10px
+.cart
+    max-width: 1140px
+    margin:  0 auto
+    @include fontRoboto
+    @include maxWidth($tablet)
+        padding: 0 10px
+    h2
+        @include text($font-size: 18px, $font-weight: 700)
+        color: $primary-color
+table, th, td, tr
+    border: 1px solid $boder-item-color
+.table-cart
+    @include maxWidth($mobile)
+        overflow-x: auto
+    .table
+        max-width: 1140px
+        margin: 50px 0
+        text-align: center
+        @include maxWidth($mobile)
+            width: 1140px
+        th
+            background: $primary-color
+            @include text($font-size: 14px, $line-height: 30px)
+            text-transform: uppercase
+            color: $white-color
+            &:first-child
+                width: 170px
+        td
+            display: table-cell
+            vertical-align: middle
+            &.name
+                text-transform: uppercase
+                color: $primary-color
+                @include text($font-size: 16px) 
+            button
+                border: none
+                background: none
+.quantity
+    span
+        @include flex($flex-direction:row, $justify-content: center, $align-items: center)
+        margin: 0 auto
+        width: 30px
+        height: 30px
+        border: 1px solid $boder-item-color
+.cart-btn
+    margin-bottom: 30px
+    float: right
+    clear: both
+    button
+        border: 1px solid $primary-color
+        padding: 10px 20px
+        border-radius: 20px
+    .btn-first
+        background: $white-color
+        color: $primary-color
+    .btn-second
+        background-color: $primary-color
+        color: $white-color
+.table-pay
+    color: $primary-color
+    tr:last-child
+        background-color: $primary-color
+        color: $white-color
+.pay-btn
+    float: right
+    clear: both
+    margin-bottom: 20px
+    button
+        border: 1px solid $primary-color
+        padding: 10px 20px
+        border-radius: 20px
+        background-color: $primary-color
+        color: $white-color

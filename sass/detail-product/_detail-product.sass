@@ -1,0 +1,179 @@
+#breadcrumb
+    max-width: 1140px
+    margin: 20px auto
+.product__detail-container
+    max-width: 1140px
+    margin: 0 auto
+    @include maxWidth($tablet)
+        margin: 50px 0
+        padding: 0 20px
+    @include maxWidth($mobile)
+        margin: 50px auto
+        padding: 0
+.product__detail
+    @include maxWidth($mobile)
+        margin: 0
+        padding: 0 10px
+    &-img
+        padding: 0
+        .img-parent
+            margin-bottom: 15px
+            img
+                width: 100%
+                height: auto
+        .img-child
+            @include flex($flex-direction: row, $align-items: center)
+            gap: 10px
+            @include maxWidth($tablet)
+                justify-content: space-between
+            img
+                width: calc(25% - 32px)
+                @include maxWidth($tablet)
+                    width: calc(25% - 25px)
+                @include maxWidth($mobile)
+                    width: calc(25% - 30px)
+    &-desc
+        @include fontRoboto
+        padding-left: 20px
+        @include maxWidth($mobile)
+            margin-top: 20px
+            padding: 0
+    &-name
+        span
+            @include text($font-size: 18px, $line-height: 30px)
+    &-rate
+        @include text($font-size: 12px)
+        color: $star-color
+    &-price
+        @include flex($flex-direction: row)
+        column-gap: 10px
+        .new-price
+            @include text($font-size: 18px, $line-height: 30px)
+            color: $new-price-color
+        .old-price
+            @include text($font-size: 14px, $line-height: 28px)
+            color: $text-color
+            text-decoration: line-through
+    &-content
+        @include text($font-size: 14px, $line-height: 20px)
+        color: $text-color
+    &-quantity
+        @include flex($flex-direction: row, $align-items: center)
+        column-gap: 40px
+        .quantity
+            @include flex($flex-direction: row, $align-items: center)
+            column-gap: 15px
+            button
+                background: none
+                padding: 15px
+                border: 1px solid $boder-item-color
+            span
+                padding: 17px 35px
+                border: 1px solid $boder-item-color
+    &-utilities
+        @include flex($flex-direction:row, $align-items: center)
+        column-gap: 20px
+        a:first-child
+            padding: 15px 40px
+            background: $primary-color
+            color: $white-color
+            border-radius: 30px
+            text-transform: uppercase
+            @include text($font-size: 13px)
+        i
+            color: $icon-cart-color
+            padding: 15px
+            border-radius: 50%
+            border: 1px solid $boder-item-color
+    &-social
+        @include flex($flex-direction: row, $align-items: center)
+        gap: 15px
+        margin-top: 25px
+        @include maxWidth($mobile)
+            flex-wrap: wrap
+        a
+            @include flex($flex-direction: row, $align-items: center)
+            column-gap: 5px
+            color: $black-color
+            i
+                @include text($font-size: 20px)
+                color: $primary-color
+.nav
+    max-width: 1140px
+    margin: 50px auto 0 auto
+.tab-content
+    @include fontRoboto
+    max-width: 1140px
+    margin: 0 auto
+    .date-time
+        @include text($font-size: 12px)
+        font-style: italic
+    button
+        padding: 10px 30px
+        border: none
+        color: $white-color
+        background-color: $primary-color
+        border-radius: 30px 
+        float: right
+        clear: both
+.tab-first
+    span
+        display: block
+        margin-bottom: 15px
+        @include text($font-size: 14px)
+    p
+        @include text($font-size: 14px, $line-height: 20px)
+.tab-three
+    p
+        @include text($font-size: 14px, $line-height: 20px)
+.product__similar-container
+    max-width: 1140px
+    margin: 0 auto
+    @include maxWidth($tablet)
+        padding: 0
+        margin: 0
+.product__similar-list
+    gap: 30px
+    @include maxWidth($mobile)
+        padding: 0 10px
+    .product__prd-item
+        width: calc(25% - 22.5px)
+        @include flex($flex-direction: column)
+        padding: 0
+        border: 1px solid $boder-item-color
+        position: relative
+        -webkit-position: relative
+        -moz-position: relative
+        -ms-position: relative
+        -o-position: relative
+        @include maxWidth($tablet)
+            width: calc(25% - 22.5px)
+        @include maxWidth($mobile)
+            width: 100%
+        img
+            max-width: 100%
+            height: auto
+            @include maxWidth($mobile)
+                width: 100%
+        .label-item
+            span
+                background: $label-color
+        .overlay
+            @include position($position: absolute, $top: 25%, $right: 20%)
+            span
+                display: block
+                padding: 10px
+                @include maxWidth($mobile)
+                    padding: 15px 25px
+            @include maxWidth($tablet)
+                @include position($position: absolute, $top: 15%, $right: 5%)
+            @include maxWidth($mobile)
+                @include position($position: absolute, $top: 30%, $right: 25%)
+        &:hover img
+            opacity: 0.6
+        &:hover .overlay
+            opacity: 1
+        .product__desc
+            text-align: center
+        .product__price
+            @include flex($flex-direction: row, $justify-content: center)

@@ -1,0 +1,32 @@
+.gradient-custom
+    @include fontRoboto
+    color: $text-color
+    .card
+        border: none
+    .nameUser
+        @include text($font-size: 16px, $font-weight: 500)
+        color: $black-color
+    .reply
+        color: $primary-color
+    .date-time
+        @include text($font-size: 12px)
+        font-style: italic
+.write-comment
+    @include fontRoboto
+    h2
+        @include text($font-size: 18px, $font-weight: 700)
+    .form-comment
+        height: 100px
+    button
+        padding: 10px 30px
+        border: none
+        color: $white-color
+        background-color: $primary-color
+        border-radius: 30px 
+        float: right
+        clear: both
+.form-info
+    @include flex($flex-direction: row, $justify-content: space-between, $align-items: center)
+    gap: 20px
+    @include maxWidth($mobile)
+        @include flex($flex-direction: column, $justify-content: space-between, $align-items: center)
