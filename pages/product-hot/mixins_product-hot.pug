@@ -1,0 +1,27 @@
+mixin itemProduct(src, alt, label, linkBuy, linkDetail, linkDetail, nameProduct, newPrice, oldPrice)
+    .product__img 
+        +img(src, alt)
+    if label
+        .label-item
+            span= label 
+    else 
+        .label-item
+    .overlay 
+        +link(linkBuy) 
+            span Mua ngay
+        +link(linkDetail)
+            i.ri-search-line
+    .product__desc
+        +link(linkDetail)
+            span= nameProduct
+        .product__rate
+            i.ri-star-fill
+            i.ri-star-fill
+            i.ri-star-fill
+            i.ri-star-fill
+            i.ri-star-half-fill
+        .product__price 
+            .new-price
+                span= newPrice
+            .old-price  
+                span= oldPrice

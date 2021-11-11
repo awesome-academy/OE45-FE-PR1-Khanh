@@ -1,0 +1,22 @@
+mixin product-hot 
+    section.product-hot.product
+        h2 Sản phẩm nổi bật
+        hr
+        .container-sm.product__container 
+            .row
+                .product__item.col-md-6.col-sm-12
+                    .product__item-lg
+                        +itemProduct('assets/sp1.png', 'sp1', "50%", null, null, null, 'Cây chân chim', '250.000 đ', '250.000 đ')
+                    .product__item-sm
+                        .product__item-child
+                            +itemProduct('assets/sp2.png','sp2',null, null, null, null, 'Cây cọ ta', '150.000 đ', '250.000 đ')
+                        .product__item-child
+                            +itemProduct('assets/sp3.png', 'sp3',null, null, null, null, 'Cây dứa nhỏ', '375.000 đ', '250.000 đ')
+                .product__item.col-md-6.col-sm-12
+                    .product__item-sm
+                        .product__item-child
+                            +itemProduct('assets/sp4.png', 'sp4', '-50%', null, null, null, 'Cây dạ lam', '500.000 đ', '250.000 đ')
+                        .product__item-child
+                            +itemProduct('assets/sp5.png', 'sp5', 'new', null, null, null, 'Cây danh dự', '850.000 đ', '250.000 đ')
+                    .product__item-lg
+                        +itemProduct('assets/sp6.png', 'sp6', '-50%', null, null, null, 'Cây đa búp đỏ', '1.000.000 đ', '250.000 đ')

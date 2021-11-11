@@ -1,0 +1,146 @@
+@import ../mixins.sass
+
+@import ./vars_product-hot
+
+@import ../vars.sass
+
+.product
+    max-width: 1140px
+    margin: 55px auto
+    @include maxWidth($tablet)
+        margin: 55px 20px
+    @include maxWidth($mobile)
+        margin: 55px 10px
+    h2
+        @include text(16px, 600, 20px)
+        color: $primary-color
+        @include fontRoboto
+        position: relative
+        -webkit-position: relative
+        -moz-position: relative
+        -ms-position: relative
+        -o-position: relative
+    h2::before
+        content: ""
+        @include position(absolute, 35px, null)
+        left: 0
+        background-color: $primary-color
+        width: 135px
+        height: 3px
+    .row
+        @include maxWidth($mobile)
+            row-gap: 20px
+        @include maxWidth($mobile-plus)
+            row-gap: 20px
+    &__container
+        padding: 0
+        margin: 0
+        max-width: 1140px
+    &__list
+        column-gap: 15px
+    &__item
+        @include flex(column, null, center)
+        row-gap: 40px
+        @include maxWidth($tablet)
+            row-gap: 20px 
+        &-lg
+            max-width: 555px
+            border: 1px solid $boder-item-color
+            position: relative
+            -webkit-position: relative
+            -moz-position: relative
+            -ms-position: relative
+            -o-position: relative
+    &__img  
+        opacity: 1
+        transition: .5s ease
+        img
+            max-width: 100%
+            height: auto
+    .label-item
+        @include position(absolute, 15px, null)
+        left: 15px
+        span
+            display: block
+            width: 50px
+            height: 50px
+            @include text(14px, 400, 20px)
+            @include flex(row, center, center)
+            color: $white-color
+            padding: 20px
+            border-radius: 50%
+            background: $primary-color
+            text-transform: uppercase
+    .overlay
+        @include flex(row,center,center)
+        column-gap: 10px
+        @include position(absolute, 35%, 27%)
+        transition: .5s ease
+        opacity: 0
+        span
+            color: $white-color
+            @include text(13px, 400, 20px)
+            padding: 15px 40px
+            background: $primary-color
+            text-transform: uppercase
+            border-radius: 30px 
+        i
+            color: $search-color
+            @include text(12px, 400, 0)
+            padding: 15px
+            border-radius: 50%
+            background: $white-color
+    &__item-lg:hover img
+                opacity: 0.6
+    &__item-lg:hover .overlay
+                opacity: 1
+    &__desc
+        @include fontRoboto
+        margin: 25px 0
+        text-align: center
+        span
+            @include text (16px, 400, 20px)
+            color: $text-color
+            margin-bottom: 10px
+            display: block
+    &__rate
+        margin-bottom: 10px
+        i
+            color: $star-color
+            @include text (14px, null, 20px)
+    &__price
+        @include flex (row, center, null)
+        column-gap: 10px
+        .new-price
+            span
+                @include text (18px, 500, 20px)
+                color: $new-price-color
+        .old-price
+            span
+                @include text (14px, 400, 20px)
+                color: $old-price-color
+                text-decoration: line-through
+    &__item-sm
+        @include flex(row, null, null)
+        column-gap: 31px
+        @include maxWidth($tablet)
+            column-gap: 15px
+    &__item-child
+        max-width: 262px
+        border: 1px solid $boder-item-color
+        position: relative
+        -webkit-position: relative
+        -moz-position: relative
+        -ms-position: relative
+        -o-position: relative
+        .overlay
+            @include position(absolute, 25%, 18%)
+            span
+                display: block
+                padding: 10px
+            @include maxWidth($tablet)
+                @include position(absolute, 25%, 5%)
+        &:hover img
+            opacity: 0.6
+        &:hover .overlay
+            opacity: 1
