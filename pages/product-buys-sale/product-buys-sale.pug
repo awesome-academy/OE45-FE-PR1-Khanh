@@ -1,0 +1,15 @@
+mixin product-buys-sale
+    .wrapper.container-sm
+        .row.product 
+            section.product__buys.col-md-3.col-sm-12
+                h2 Sản phẩm mua nhiều 
+                hr
+                .container-sm.product__container.scroll
+                    .row.product__buys-list
+                        +productItem(itemBuys)
+            section.product__sale.col-md-9.col.sm-12
+                h2 Sản phẩm khuyến mại 
+                hr
+                .container-sm.product__container.scroll
+                    .row.product__sale-list
+                        +productItem(itemSale)

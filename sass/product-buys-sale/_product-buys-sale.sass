@@ -1,0 +1,101 @@
+.wrapper
+    padding: 0
+    max-width: 1140px
+    margin: 0 auto
+    .product
+        column-gap: 31px
+        @include maxWidth($tablet)
+            column-gap: 13px
+        @include maxWidth($mobile)
+            @include flex($flex-direction: column)
+            row-gap: 30px
+        &__container
+            @include flex($flex-direction: row, $justify-content: center)
+        .scroll
+            overflow-y: auto
+            height: 770px
+        &__buys
+            width: 262px
+            padding: 0
+            h2::before
+                width: 162px
+            @include maxWidth($tablet)
+                width: 250px
+            @include maxWidth($mobile)
+                width: 100%
+            &-list
+                max-width: 100%
+                @include maxWidth($mobile)
+                    row-gap: 0
+            .product__prd-item
+                @include flex($flex-direction: row, $justify-content: flex-start, $align-items: center)
+                column-gap: 15px
+                border: 1px solid $boder-item-color
+                border-bottom: none
+                padding: 0 20px
+                height: 128px
+                @include maxWidth($tablet)
+                    padding: 0 10px
+                @include maxWidth($mobile)
+                    column-gap: 50px
+                &:last-child
+                    border-bottom: 1px solid $boder-item-color
+                img
+                    max-width: 80px
+                    height: 80px
+                .overlay
+                    display: none
+        &__desc
+            text-align: unset
+        &__price
+            display: block
+        &__sale
+            max-width: 847px
+            padding: 0
+            h2::before
+                width: 170px
+            @include maxWidth($tablet)
+                flex: 1
+            &-list
+                width: 100%
+                @include flex($flex-direction: row, $justify-content: space-between)
+                row-gap: 30px 
+            .product__prd-item
+                max-width: 262px
+                @include flex($flex-direction: column)
+                padding: 0
+                border: 1px solid $boder-item-color
+                position: relative
+                -webkit-position: relative
+                -moz-position: relative
+                -ms-position: relative
+                -o-position: relative
+                @include maxWidth($tablet)
+                    max-width: 230px
+                @include maxWidth($mobile)
+                    max-width: 100%
+                img
+                    max-width: 100%
+                    height: auto
+                .label-item
+                    span
+                        background: $label-color
+                .overlay
+                    @include position($position: absolute, $top: 25%, $right: 20%)
+                    span
+                        display: block
+                        padding: 10px
+                        @include maxWidth($mobile)
+                            padding: 15px 25px
+                    @include maxWidth($tablet)
+                        @include position($position: absolute, $top: 25%, $right: 15%)
+                    @include maxWidth($mobile)
+                        @include position($position: absolute, $top: 30%, $right: 25%)
+                &:hover img
+                    opacity: 0.6
+                &:hover .overlay
+                    opacity: 1
+                .product__desc
+                    text-align: center
+                .product__price
+                    @include flex($flex-direction: row, $justify-content: center)

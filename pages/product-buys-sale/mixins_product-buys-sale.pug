@@ -1,0 +1,29 @@
+mixin productItem(itemsProduct)
+    each item in itemsProduct
+        .product__prd-item
+            .product__img 
+                +img(item.src, item.alt)
+            if item.label
+                .label-item
+                    span= item.label 
+            else 
+                .label-item
+            .overlay 
+                +link('cart.html') 
+                    span Mua ngay
+                +link('detail.html')
+                    i.ri-search-line
+            .product__desc
+                +link('detail.html')
+                    span= item.nameProduct
+                .product__rate
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-fill
+                    i.ri-star-half-fill
+                .product__price 
+                    .new-price
+                        span= item.newPrice
+                    .old-price  
+                        span= item.oldPrice
