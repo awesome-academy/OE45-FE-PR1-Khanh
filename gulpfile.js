@@ -1,7 +1,7 @@
 const
     { src, dest, parallel, watch, series } = require('gulp'),
     concat = require('gulp-concat'),
-    sass = require('gulp-sass')(require('sass'));
+    sass = require('gulp-sass')(require('sass')),
     pug = require('gulp-pug'),
     browserSync = require('browser-sync').create()
 
@@ -55,10 +55,9 @@ function serve() {
             baseDir: 'dist'
         }
     })
-
-    watch(sassFiles, sassTask);
+    watch('sass/**/*', sassTask);
     watch(jsFiles, jsTask);
-    watch(htmlFiles, htmlTask);
+    watch('pages/**/*', htmlTask);
 }
 
 
