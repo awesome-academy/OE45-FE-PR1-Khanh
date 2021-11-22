@@ -1,0 +1,7 @@
+mixin breadcrumb 
+    nav(aria-label="breadcrumb")#breadcrumb
+        ol.breadcrumb
+            li.breadcrumb-item
+                +link() Home 
+            li.breadcrumb-item.active(aria-current="page") 
+                +link() Danh sách sản phẩm
