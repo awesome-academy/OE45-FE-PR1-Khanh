@@ -1,0 +1,9 @@
+mixin product-new
+    .ads 
+        +img('assets/ads.png', 'ads')
+    section.product-new.product
+        h2 Sản phẩm mới
+        hr
+        .container-sm.product__container 
+            .row.product__new-list  
+                +productItem(itemNew)
