@@ -1,0 +1,36 @@
+.news-home
+    @include maxWidth($mobile)
+        display: none
+.product
+    &__news-list
+        gap: 30px
+        padding: 0 10px
+    &__news-item
+        padding: 0
+        width: calc(33.333% - 20px)
+        @include maxWidth($mobile)
+            width: 100%
+        img
+            max-width: 100%
+            height: auto
+    &__news-desc
+        margin: 25px 0 50px 0
+    &__date
+        padding-bottom: 20px
+        @include text($font-size: 16px, $line-height: 20px)
+        color: $text-color
+        font-style: italic
+    &__title
+        padding-bottom: 15px
+        a
+            @include text($font-size: 18px, $font-weight: 600, $line-height: 20px)
+            color: $primary-color
+    &__content
+        padding-bottom: 20px
+        a
+            @include text($font-size: 16px, $line-height: 20px)
+            color: $text-color
+    .read-more
+        @include text($font-size: 16px, $line-height: 20px)
+        color: $primary-color
+        font-style: italic
