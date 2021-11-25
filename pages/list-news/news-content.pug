@@ -1,0 +1,27 @@
+mixin news-content
+    +breadcrumb-page(newsBreadcrumb)
+    .wrapper-list
+        .container-sm.menu-list 
+            .row
+                nav.col-md-3.col-sm-12
+                    .nav-category
+                        h2.title Danh mục sản phẩm
+                        hr
+                        .accordion#accordionExample
+                            +menuList(menuSidebar)
+                    .nav__news
+                        h2.title Tin tức nổi bật
+                        hr
+                        .nav__news-list
+                            +navNews(navNews)
+                    .nav__blogtag
+                        h2.title Blog tag 
+                        hr
+                        .nav__blogtag-list 
+                            +blogTags(blogTags)
+                section.news-list.col-md-9.col-sm-12 
+                    .container-sm.news__list-container 
+                        .row 
+                            .news__list
+                                +itemNewLists(itemNewLists)
+                    +pagination(paginations)

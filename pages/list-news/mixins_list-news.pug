@@ -1,0 +1,35 @@
+mixin navNews(navNews)
+    each item in navNews
+        .nav__news-items
+            +img(item.src, item.alt)
+            .nav__news-desc
+                p= item.newsDesc
+
+mixin blogTags(blogTags)
+    each item in blogTags 
+        span= item
+
+mixin itemNewLists(itemNewLists)
+    each item in itemNewLists 
+        .news__list-item
+            h2.title= item.title
+            .news__list-info
+                .news-date
+                    i.ri-calendar-line 
+                    span= item.date
+                .news-time
+                    i.ri-time-line 
+                    span= item.time
+                .news-comment 
+                    i.ri-message-3-line
+                    span= item.comment
+            +img(item.src, item.alt)
+            .news__list-desc
+                p= item.desc
+
+mixin pagination(paginations)
+    nav(aria-label="Page navigation example").pagination
+        ul.pagination
+            each item in paginations 
+                li.page-item
+                    +link().page-link= item
