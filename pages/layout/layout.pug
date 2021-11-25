@@ -1,32 +1,18 @@
 include ../header/header 
 
-include ../product-hot/mixins_product-hot
-
 include ../base/mixins
 
-include ../product-hot/vars_product-hot
+include ../base/variables
 
-include ../product-buys-sale/mixins_product-buys-sale
+include ../cart-product/cart-content
 
-include ../news-home/mixins_news-home
+include ../detail-news/detail-news-content
 
-include ../news-home/vars_news-home
+include ../list-news/news-content
 
-include ../product-buys-sale/vars_product-buys-sale
+include ../list-product/list-content
 
-include ../product-new/vars_product-new
-
-include ../list-product/mixins_list-product
-
-include ../list-product/vars_list-product
-
-include ../detail-product/vars_detail-product
-
-include ../detail-product/mixins_detail-product
-
-include ../cart-product/mixins_cart-product
-
-include ../cart-product/vars_cart-product
+include ../register/register-content
 
 doctype html
 html(lang="en")
@@ -49,3 +35,5 @@ html(lang="en")
         block grid-all-product
         block detail-product
         block cart-product 
+        block list-all-news
+        block register

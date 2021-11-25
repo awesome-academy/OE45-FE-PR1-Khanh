@@ -1,0 +1,755 @@
+-   
+    var itemBuys= [
+        {
+            src: 'assets/buys1.png',
+            alt: 'buys1',
+            nameProduct: 'Cây chân chim',
+            newPrice: '250.000 đ', 
+        },
+        {
+            src: 'assets/buys2.png',
+            alt: 'buys2',
+            nameProduct: 'Cây dạ lam',
+            newPrice: '150.000 đ', 
+        },
+        {
+            src: 'assets/buys3.png',
+            alt: 'buys3',
+            nameProduct: 'Cây danh dự',
+            newPrice: '450.000 đ', 
+        },
+        {
+            src: 'assets/buys4.png',
+            alt: 'buys4',
+            nameProduct: 'Cây đa búp đỏ',
+            newPrice: '200.000 đ', 
+        },
+        {
+            src: 'assets/buys5.png',
+            alt: 'buys5',
+            nameProduct: 'Cây cọ ta',
+            newPrice: '300.000 đ', 
+        },
+        {
+            src: 'assets/buys6.png',
+            alt: 'buys6',
+            nameProduct: 'Cây dứa nhỏ',
+            newPrice: '275.000 đ', 
+        },
+    ]  
+
+-   
+    var itemSale= [
+        {
+            src: 'assets/sale1.png',
+            alt: 'sale1',
+            label: '-25%',
+            nameProduct: 'Cây danh dự',
+            newPrice: '475.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/sale2.png',
+            alt: 'sale2',
+            label: '-10%',
+            nameProduct: 'Cây dừa nhỏ',
+            newPrice: '668.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/sale3.png',
+            alt: 'sale3',
+            nameProduct: 'Cây cọ ta',
+            newPrice: '450.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/sale4.png',
+            alt: 'sale4',
+            nameProduct: 'Cây dạ lam',
+            newPrice: '200.000 đ',
+            oldPrice: '250.000 đ' 
+        },
+        {
+            src: 'assets/sale5.png',
+            alt: 'sale5',
+            nameProduct: 'Cây danh dự',
+            newPrice: '780.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/sale6.png',
+            alt: 'sale6',
+            nameProduct: 'Cây dứa nhỏ',
+            newPrice: '680.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+    ]  
+
+-   
+    var itemNew= [
+        {
+            src: 'assets/new1.png',
+            alt: 'new1',
+            label: 'NEW',
+            nameProduct: 'Cây danh dự',
+            newPrice: '250.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/new2.png',
+            alt: 'new2',
+            nameProduct: 'Cây xương rồng',
+            newPrice: '250.000 đ', 
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/new3.png',
+            alt: 'new3',
+            nameProduct: 'Cây dạ lam',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000'
+        },
+        {
+            src: 'assets/new4.png',
+            alt: 'new4',
+            nameProduct: 'Cây dừa nhỏ',
+            newPrice: '250.000 đ', 
+            oldPrice: '250.000'
+        },
+        {
+            src: 'assets/new5.png',
+            alt: 'new5',
+            nameProduct: 'Cây danh dự',
+            newPrice: '680.000 đ',
+            oldPrice: '250.000' 
+        },
+        {
+            src: 'assets/new6.png',
+            alt: 'new6',
+            nameProduct: 'Cây dạ lam',
+            newPrice: '880.000 đ',
+            oldPrice: '250.000' 
+        },
+        {
+            src: 'assets/new7.png',
+            alt: 'new7',
+            nameProduct: 'Cây chân chim',
+            newPrice: '750.000 đ',
+            oldPrice: '250.000' 
+        },
+        {
+            src: 'assets/new8.png',
+            alt: 'new8',
+            nameProduct: 'Cây đa búp đỏ',
+            newPrice: '150.000 đ',
+            oldPrice: '250.000' 
+        },
+    ]  
+
+-
+    var itemNews = [
+        { 
+            src: 'assets/new1.png',
+            alt: 'new1',
+            date: 'Thứ 7, ngày 31, tháng 12, năm 2015',
+            title: '15 thiết kế phòng ngủ tuyệt đẹp vạn người mê',
+            content: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hện nay nhé'
+        },
+        { 
+            src: 'assets/new2.png',
+            alt: 'new2',
+            date: 'Thứ 7, ngày 31, tháng 12, năm 2015',
+            title: 'Tạo tiểu cảnh góc sân cho nhà phố, biệt thự',
+            content: 'Khi bước từ ngõ vào hay từ trong nhà đi ra, góc sân luôn là điểm nhìn đầu tiên của chúng ta.'
+        },
+        { 
+            src: 'assets/new3.png',
+            alt: 'new3',
+            date: 'Thứ 7, ngày 31, tháng 12, năm 2015',
+            title: 'Cách bố trí chậu hoa trước cửa ấn tượng',
+            content: 'Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa'
+        }
+    ]
+
+-   var listproductBreadcrumb = ['Danh sách sản phẩm']
+
+-
+    var menuSidebar = [
+        {   
+            heading_id: 'headingOne',
+            collapse_id: 'collapseOne',
+            category: 'Cây chậu treo (10)',
+            product: ['Cây ngọc ngân', 'Cây dương cầm', 'Cây đa đỏ']
+        },
+        {   
+            active: 'active',
+            heading_id: 'headingTow',
+            collapse_id: 'collapseTow',
+            category: 'Cây có hoa (5)',
+            product: ['Cây cọ ta', 'Cây dứa nhỏ', 'Cây chân chim', 'Cây danh dự']
+        },
+        {   
+            heading_id: 'headingThree',
+            collapse_id: 'collapseThree',
+            category: 'Cây dây leo',
+            product: ['Cây hoa mười', 'Cây dạ lam', 'Cây chân chim']
+        },
+        {   
+            heading_id: 'headingFour',
+            collapse_id: 'collapseFour',
+            category: 'Cây để bàn',
+            product: ['Cây cọ ta', 'Cây dứa nhỏ', 'Cây chân chim', 'Cây danh dự']
+        },
+        {   
+            heading_id: 'headingFive',
+            collapse_id: 'collapseFive',
+            category: 'Cây may mắn',
+            product: ['Cây cọ ta', 'Cây chân chim', 'Cây danh dự']
+        },
+        {   
+            heading_id: 'headingSix',
+            collapse_id: 'collapseSix',
+            category: 'Cây trang trí',
+            product: ['Cây đa búp đỏ', 'Cây hoa giấy', 'Cây xương rồng']
+        },
+        {   
+            heading_id: 'headingSeven',
+            collapse_id: 'collapseSeven',
+            category: 'Cây nội thất',
+            product: ['Cây dừa xiêm', 'Cây chân chim', 'Cây xương rồng', 'Cây danh dự']
+        }
+    ]
+
+-
+    var menuSearchPrices = [
+        {
+            heading_id: 'headingEight',
+            collapse_id: 'collapseEight',
+            price: '200.000 Đ - 400.000 Đ'
+        },
+        {
+            heading_id: 'headingNine',
+            collapse_id: 'collapseNine',
+            price: '400.000 Đ - 600.000 Đ'
+        },
+        {
+            heading_id: 'headingTen',
+            collapse_id: 'collapseTen',
+            price: '600.000 Đ - 800.000 Đ'
+        },
+        {
+            heading_id: 'headingElevent',
+            collapse_id: 'collapseElevent',
+            price: '800.000 Đ - 1000.000 Đ'
+        }
+    ]
+
+-
+    var colorLefts = [
+        {
+            color: 'green',
+            nameColor: 'Xanh cây'
+        },
+        {
+            color: 'red-orange',
+            nameColor: 'Đỏ cam'
+        },
+        {
+            color: 'violet',
+            nameColor: 'Tím'
+        }
+    ]
+
+-
+    var colorRights =
+    [
+        {
+            color: 'blue',
+            nameColor: 'Xanh trời'
+        },
+        {
+            color: 'yellow',
+            nameColor: 'Vàng'
+        },
+        {
+            color: 'pink',
+            nameColor: 'Hồng'
+        }
+    ]
+
+-
+    var productGrids = [
+        {
+            src: 'assets/prd-category1.png',
+            alt: 'prd-category1',
+            nameProduct: 'Cây da lam',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category2.png',
+            alt: 'prd-category2',
+            nameProduct: 'Cây danh dự',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category3.png',
+            alt: 'prd-category3',
+            nameProduct: 'Cây chân chim',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category4.png',
+            alt: 'prd-category4',
+            nameProduct: 'Cây cọ ta',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category5.png',
+            alt: 'prd-category5',
+            nameProduct: 'Cây dứa nhỏ',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category6.png',
+            alt: 'prd-category6',
+            nameProduct: 'Cây đa búp đỏ',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category7.png',
+            alt: 'prd-category7',
+            nameProduct: 'Cây chân chim',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category8.png',
+            alt: 'prd-category8',
+            nameProduct: 'Cây dứa nhỏ',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category9.png',
+            alt: 'prd-category9',
+            nameProduct: 'Cây cọ ta',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category10.png',
+            alt: 'prd-category10',
+            nameProduct: 'Cây da lam',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category11.png',
+            alt: 'prd-category11',
+            nameProduct: 'Cây danh dự',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        },
+        {
+            src: 'assets/prd-category12.png',
+            alt: 'prd-category12',
+            nameProduct: 'Cây dứa nhỏ',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000 đ'
+        }
+    ]
+
+-
+    var itemList= [
+        {
+            src: 'assets/prd-list1.png',
+            alt: 'prd-list',
+            nameProduct: 'Cây ngọc ngân',
+            contentProduct: 'Cây ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "người ấy". Ngọc ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng',
+            priceProduct: '279. 000 đ'
+        },
+        {
+            src: 'assets/prd-list2.png',
+            alt: 'prd-list2',
+            nameProduct: 'Cây ngọc ngân',
+            contentProduct: 'Cây ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "người ấy". Ngọc ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng',
+            priceProduct: '279. 000 đ'
+        },
+        {
+            src: 'assets/prd-list3.png',
+            alt: 'prd-list3',
+            nameProduct: 'Cây ngọc ngân',
+            contentProduct: 'Cây ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "người ấy". Ngọc ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng',
+            priceProduct: '279. 000 đ'
+        },
+        {
+            src: 'assets/prd-list4.png',
+            alt: 'prd-list4',
+            nameProduct: 'Cây ngọc ngân',
+            contentProduct: 'Cây ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "người ấy". Ngọc ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng',
+            priceProduct: '279. 000 đ'
+        },
+        {
+            src: 'assets/prd-list5.png',
+            alt: 'prd-list5',
+            nameProduct: 'Cây ngọc ngân',
+            contentProduct: 'Cây ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng "người ấy". Ngọc ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng',
+            priceProduct: '279. 000 đ'
+        }
+    ]
+
+-
+    var similarProducts = [
+        {
+            src: 'assets/similar1.png',
+            alt: 'similar1',
+            nameProduct: 'Cây cọ Nhật',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000'
+        },
+        {
+            src: 'assets/similar2.png',
+            alt: 'similar2',
+            nameProduct: 'Cây hồng môn',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000'
+        },
+        {
+            src: 'assets/similar3.png',
+            alt: 'similar3',
+            nameProduct: 'Cây phát lộc',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000'
+        },
+        {
+            src: 'assets/similar4.png',
+            alt: 'similar4',
+            nameProduct: 'Cây kim ngưu',
+            newPrice: '250.000 đ',
+            oldPrice: '250.000'
+        }
+    ]
+
+-
+    var imgDetail = [
+        {
+            src: 'assets/detail.png',
+            alt: 'detail1',
+            imgChild: [
+                {
+                    src: 'assets/detail2.png',
+                    alt: 'detail2',
+                },
+                {
+                    src: 'assets/detail3.png',
+                    alt: 'detail3',
+                },
+                {
+                    src: 'assets/detail4.png',
+                    alt: 'detail4',
+                },
+                {
+                    src: 'assets/detail5.png',
+                    alt: 'detail5',
+                },
+                {
+                    src: 'assets/detail6.png',
+                    alt: 'detail6',
+                }
+            ]
+        }
+    ]
+
+-   var detailBreadcrumb = ['Cây dạ lam']
+
+-
+    var itemSocials = [
+        {
+            icon: 'ri-facebook-circle-fill',
+            label: 'Facebook'
+        },
+        {
+            icon: 'ri-twitter-fill',
+            label: 'Twiter'
+        },
+        {
+            icon: 'ri-instagram-fill',
+            label: 'Instagram'
+        },
+        {
+            icon: 'ri-share-line',
+            label: 'Share'
+        }
+    ]
+
+-
+    var tabsBtn = [
+        {
+            id: 'nav-home-tab',
+            nameBtn: 'Thông tin sản phẩm',
+            controls: 'nav-home',
+            selected: 'true'
+        },
+        {
+            id: 'nav-profile-tab',
+            nameBtn: 'Khách hàng đánh giá',
+            controls: 'nav-profile',
+            selected: 'false'
+        },
+        {
+            id: 'nav-contact-tab',
+            nameBtn: 'Thẻ tag',
+            controls: 'nav-contact',
+            selected: 'false'
+        }
+    ]
+
+-
+    var contentTabOnes = [
+        {
+            id: 'nav-home',
+            class: ['tab-first', 'ps-3', 'pe-3', 'pt-3', 'show', 'active'],
+            label: 'nav-home-tab',
+            contentShort: ['Tên phổ Thông: Dạ lam, Huỳnh tinh cảnh, Dong vân.', 'Tên khoa học: Calathea zebrina.', 'Họ thực vật: Marantaceae (Củ dong).', 'Chiều cao: 0,8 - 1,2m.', 'Cây lam dạ có nhiều nguồn gốc từ Brazil, được du nhập và phân bố rộng khắp ở Việt Nam.'],
+            contentLong: 'Cây Dong Vằn còn có tên gọi khác là cây Dạ Lam, Huỳnh Tinh Cảnh. Cây được biết đến với tên khoa học là Calathea zebrina. Giống cây này nằm trong họ Củ Dong. Giống cây này thường mọc thành những bụi cây thưa. Chiều cao trung bình của cây khoảng 1m. Cây sống rất lâu năm với phần rễ khỏe và dài, nằm sâu dưới lòng đất. Đặc tính lá cây dạng bầu dục, lá nhọn ở hai đầu và có sắc đỏ tía ở phần mặt dưới. Mặt trên của lá sắc lục nhạt và được bao phủ bởi lớp lông mịn. Cây có những vằn lục đậm sóng song trên mặt lá và chạy dọc theo các mép lá. Cuống lá cong và có dạng hình lòng máng. Cây cho lá dáng vô cùng đẹp với phần gân bên nổi rất rõ, mảnh. Cây cho hoa mọc thành cụm giữa các phiến la. Hoa mọc trong gốc cuống chung khá lớn. Hoa mọc ở phần đỉnh với hoa sắc tím mọc dày đặc ở phần đỉnh cây. Giống cây này có thể chịu bóng bán phần và có thể làm cây trang trí trong nhà, khu văn phòng. Tốc độ sinh trưởng của cây nhanh và có nhu cầu nước cao. Cây có thể nhân giống nhanh chóng và dễ dàng bằng việc tách bụi.'
+        }
+    ]
+
+-
+    var contentTabTows = [
+        {
+            id: 'nav-profile',
+            label: 'nav-profile-tab'
+        }
+    ]
+
+-
+    var contentTabThrees = [
+        {
+            id: 'nav-contact',
+            class: ['tab-three', 'ps-3', 'pt-3'],
+            label: 'nav-contact-tab',
+            content: ['#Caydong', '#Marantaceae', '#duoinuoc']
+        }
+    ]
+
+-
+    var comment = [
+        {
+            src: 'assets/avt-detail-news.png',
+            alt: 'avatar',
+            nameUser: 'Nguyễn Văn A',
+            content: 'It is a long established fact that a reader will be distracted by the readable content of a page.',
+            date: 'Thứ 7, 26/12/2015 12:00 AM'
+        },
+        {
+            src: 'assets/avt-detail-news.png',
+            alt: 'avatar',
+            nameUser: 'Nguyễn Văn B',
+            content: 'It is a long established fact that a reader will be distracted by the readable content of a page.',
+            date: 'Thứ 7, 26/12/2015 12:00 AM'
+        },
+        {
+            src: 'assets/avt-detail-news.png',
+            alt: 'avatar',
+            nameUser: 'Nguyễn Văn C',
+            content: 'It is a long established fact that a reader will be distracted by the readable content of a page.',
+            date: 'Thứ 7, 26/12/2015 12:00 AM'
+        }
+    ]
+
+-
+    var cartBody= [
+        {
+           src: 'assets/cart1.png',
+           alt: 'cart1',
+           nameProduct: 'Cây văn phòng',
+           priceProduct: '250.000 đ',
+           qtyProduct: '1',
+           totalPrice: '250.000 đ' 
+        },
+        {
+           src: 'assets/cart1.png',
+           alt: 'cart1',
+           nameProduct: 'Cây văn phòng',
+           priceProduct: '250.000 đ',
+           qtyProduct: '1',
+           totalPrice: '250.000 đ' 
+        },
+        {
+           src: 'assets/cart1.png',
+           alt: 'cart1',
+           nameProduct: 'Cây văn phòng',
+           priceProduct: '250.000 đ',
+           qtyProduct: '1',
+           totalPrice: '250.000 đ' 
+        }
+    ] 
+
+-   var cartBreadcrumb = ['Giỏ hàng']
+
+-   var newsBreadcrumb= ['Tin tức']
+
+-
+    var navNews= [
+        {
+            src: 'assets/nav-news1.png',
+            alt: 'nav-news1',
+            newsDesc: 'Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách'
+        },
+        {
+            src: 'assets/nav-news2.png',
+            alt: 'nav-news2',
+            newsDesc: 'Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách'
+        },
+        {
+            src: 'assets/nav-news3.png',
+            alt: 'nav-news3',
+            newsDesc: 'Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách'
+        },
+        {
+            src: 'assets/nav-news4.png',
+            alt: 'nav-news4',
+            newsDesc: 'Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách'
+        },
+        {
+            src: 'assets/nav-news5.png',
+            alt: 'nav-news5',
+            newsDesc: 'Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách'
+        },
+    ]
+
+-   var blogTags = ['Cây văn phòng', 'Cây phát lộc', 'Cây xanh', 'Cây trang trí', 'Cây', 'Plants', 'Sức khỏe', 'Quà tặng', 'Lưu niệm']
+
+-
+    var itemNewLists = [
+        {
+            src: 'assets/news-list1.png',
+            alt: 'news-list1',
+            title: 'Cách bố trí hoa chậu trước cửa ấn tượng ngày đầu tiên',
+            date: '20/12/2015',
+            time: '11:20',
+            comment: '0 Bình luận',
+            desc: 'Như thể hiện sự yêu mến hay mến khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một..'    
+        },
+        {
+            src: 'assets/news-list2.png',
+            alt: 'news-list2',
+            title: 'Cách bố trí hoa chậu trước cửa ấn tượng ngày đầu tiên',
+            date: '20/12/2015',
+            time: '11:20',
+            comment: '0 Bình luận',
+            desc: 'Như thể hiện sự yêu mến hay mến khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một..'
+        },
+        {
+            src: 'assets/news-list3.png',
+            alt: 'news-list3',
+            title: 'Cách bố trí hoa chậu trước cửa ấn tượng ngày đầu tiên',
+            date: '20/12/2015',
+            time: '11:20',
+            comment: '0 Bình luận',
+            desc: 'Như thể hiện sự yêu mến hay mến khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một..'
+        }
+    ]
+
+-   var paginations = ['Trang trước', 1, 2, 3, 4, 'Trang cuối']
+
+-
+    var detailNews = [
+        {
+            src: 'assets/news-list1.png',
+            alt: 'news-list1',
+            title: 'Cách bố trí hoa chậu trước cửa ấn tượng ngày đầu tiên',
+            date: '20/12/2015',
+            time: '11:20',
+            comment: '0 Bình luận',
+            desc: 'Như thể hiện sự yêu mến hay mến khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một..',
+            contentOne: 'Cây cảnh là một loại hình nghệ thuật. Ví dụ hội họa, cây cảnh là một bức tranh lập thể; lại giống như lâm viên, cây cảnh là cảnh quan thu nhỏ. Cây cảnh lấy tự nhiên làm gốc, nhưng không phải bắt chước tự nhiên một cách đơn thuần. Trong quá trình sáng tạo, nghệ thuật cây cảnh luôn sử dụng thủ pháp kết hợp giữa sự lãng mạn và tính hiện thực, để đạt đến hiệu quả thẩm mỹ là bắt nguồn từ tự nhiên nhưng cao hơn tự nhiên. Có nhiều người đánh đồng giữa “cây cảnh” và “cây trồng trong chậu”. Chúng có chỗ giống nhau, đó là đều trồng cây trong chậu để ngắm nhìn, giữ cho cây sinh trưởng khỏe mạnh, nở nhiều hoa, ra nhiều quả. Nhưng đây chỉ đơn giản là phương thức vun trồng. Ở “cây trồng trong chậu”, cây cũng cần phải cắt tỉa, nhưng mục đích không phải là tạo cảnh. Còn “cây cảnh” là “cảnh trong chậu”, nó nhấn mạnh ở chữ “cảnh”, đó là sản phẩm của sự kết hợp hoàn hảo giữa kỹ thuật trồng cây và nghệ thuật tạo hình. Nó bao gồm những chậu cây cảnh muôn hình muôn sắc và những chậu non bộ trăm hình vạn trạng. Nó là hình ảnh thu nhỏ của tự nhiên bao la, khi thưởng thức, người ta có một cảm giác như chính mình đang đắm chìm dao du trong cảnh giới ấy. Khi sắp xếp bố trí cây cảnh, cần phải kết hợp với chậu và bàn.... để tôn thêm vẻ đẹp của cây cảnh, như thế mới tạo nên ý cảnh, trong đó có thể tức cảnh sinh tình, cảnh tình hòa quyện với nhau.',
+            srcTwo: 'assets/detail-news.png',
+            altTwo: 'detail-news',
+            contentTwo: 'Vào cuối thời Đường đầu thời Tống, những chậu cây cảnh bắt nguồn từ Trung Quốc đã truyền đến Nhật Bản, khi đó người ta gọi “cây cảnh” là “cây trồng trong chậu” (dạng bon sai), đồng thời được phát triển rất nhanh. Đến đàu thế kỷ 20, bon sai Nhật Bản lại được truyền đến châu Âu, dần dần được người Âu Mỹ quen thuộc và yêu thích, lâu nay nhiều nước Âu Mỹ vẫn gọi “cây cảnh” là cây trồng trong chậu. Gần đây, thông qua giao lưu quốc tế và các hoạt động thương mại mậu dịch, nghệ thuật cây cảnh bắt nguồn từ Trung Quốc đã được thế giới công nhận.'
+        }
+    ]
+
+-
+    var newsInputs = [
+        {
+            id: 'name',
+            type: 'text',
+            placeholder: 'Họ và Tên'
+        },
+        {
+            id: 'email',
+            type: 'text',
+            placeholder: 'Email'
+        },
+        {
+            id: 'number', 
+            type: 'number',
+            placeholder: 'Phone'
+        },
+        {
+            id: 'field',
+            type: 'text',
+            placeholder: 'Bình luận'
+        }
+    ]
+
+-   var registerBreadcrumb = ['Đăng ký']
+
+-
+    var personalInfo = [
+        {
+            label: 'Họ và tên',
+            icon: 'ri-asterisk',
+            id: 'name',
+            type: 'text',
+            placeholder: 'Họ và tên'
+        },
+        {
+            label: 'Số ĐT',
+            icon: 'ri-asterisk',
+            id: 'number',
+            type: 'number',
+            placeholder: 'Số ĐT'
+        },
+        {
+            label: 'Địa chỉ Email',
+            icon: 'ri-asterisk',
+            id: 'email',
+            type: 'text',
+            placeholder: 'Email'
+        },
+        {
+            label: 'Website của bạn',
+            icon: 'ri-asterisk',
+            id: 'website',
+            type: 'text',
+            placeholder: 'Website'
+        }
+    ]
+
+-
+    var accountInfo = [
+        {
+            label: 'Mật khẩu',
+            icon: 'ri-asterisk',
+            id: 'password',
+            type: 'password',
+            placeholder: 'Mật khẩu'
+        },
+        {
+            label: 'Nhập lại mật khẩu',
+            icon: 'ri-asterisk',
+            id: 're-password',
+            type: 'password',
+            placeholder: 'Nhập lại mật khẩu'
+        }
+    ]
