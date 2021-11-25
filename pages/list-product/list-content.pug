@@ -1,0 +1,70 @@
+mixin content
+    .wrapper-list
+        .container-sm.menu-list 
+            .row 
+                nav.col-md-3.col-sm-12
+                    .nav-category
+                        h2.title Danh mục sản phẩm
+                        hr
+                        .accordion#accordionExample
+                            +menuList(menuSidebar)
+                    .nav-search__price
+                        h2.title Tìm theo giá
+                        hr
+                        .accordion#accordionExample
+                            +menuPrice(menuSearchPrices)
+                    .nav-search__color 
+                        h2.title Tìm theo màu 
+                        hr
+                        .color 
+                            .color__list-left
+                                +menuColor(colorLefts)
+                            .color__list-right
+                                +menuColor(colorRights)
+                .product__category.col-md-9.col-sm-12
+                    +img('assets/banner-list-product.png')
+                    .category__utilities 
+                        .product__list-style 
+                            +link('grid-all-product.html').active
+                                i.ri-grid-fill
+                            +link('list-all-product.html')
+                                i.ri-list-check
+                        .category__tools
+                            .category__sort
+                                span Sắp xếp theo 
+                                .dropdown
+                                    button.btn-default.dropdown-toggle(type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false") Tên sản phẩm
+                                    ul(aria-labelledby="dropdownMenuButton1").dropdown-menu
+                                        li
+                                            +link().dropdown-item Tên sản phẩm 
+                                        li
+                                            +link().dropdown-item Giá sản phẩm
+                            .product__show
+                                span Show 
+                                .dropdown
+                                    button.btn-default.dropdown-toggle(type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false") 15
+                                    ul(aria-labelledby="dropdownMenuButton1").dropdown-menu
+                                        li
+                                            +link().dropdown-item 5
+                                        li
+                                            +link().dropdown-item 10
+                                        li
+                                            +link().dropdown-item 15
+                    block list-all-product
+                        .container-sm.product__container
+                            .row.product
+                                +productItem(productGrids)
+                    nav(aria-label="Page navigation example")
+                        ul.pagination
+                            li.page-item
+                                +link().page-link Trang trước
+                            li.page-item.active
+                                +link().page-link 1
+                            li.page-item
+                                +link().page-link 2
+                            li.page-item
+                                +link().page-link 3
+                            li.page-item
+                                +link().page-link 4
+                            li.page-item
+                                +link().page-link Trang cuối
