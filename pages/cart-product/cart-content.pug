@@ -1,0 +1,32 @@
+mixin cart-content
+    +breadcrumb-page(cartBreadcrumb)
+    section.cart
+        h2 Giỏ hàng
+        .table-cart
+            table.table
+                thead
+                    tr
+                        th(scope="col") Hình ảnh
+                        th(scope="col") Tên sản phẩm
+                        th(scope="col") Đơn giá
+                        th(scope="col") Số lượng
+                        th(scope="col") Thành tiền
+                        th(scope="col") Xóa
+                tbody
+                    +cartBody(cartBody)
+        .cart-btn 
+            button(type="button").btn-first Hủy đơn hàng 
+            button(type="button").btn-second Tiếp tục mua
+        table.table.table-pay
+            tbody 
+                tr 
+                    td(scope="row") Tổng tiền (chưa thuế) 
+                    td 270.000 đ
+                tr 
+                    td(scope="row") Thuế (VAT 10%)
+                    td 27.000 đ
+                tr
+                    td(scope="row") Tổng phải thanh toán
+                    td 297.000 đ
+        .pay-btn 
+            button(type="button") Thanh toán

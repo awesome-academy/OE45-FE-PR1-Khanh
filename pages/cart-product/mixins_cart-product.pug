@@ -1,0 +1,16 @@
+mixin cartBody(cartBody)
+    each item in cartBody 
+        tr
+            td.image
+                +img(item.src, item.alt)
+            td.name 
+                span= item.nameProduct
+            td.price 
+                span= item.priceProduct
+            td.quantity
+                span= item.qtyProduct
+            td.total-price 
+                span= item.totalPrice
+            td.delete 
+                button(type="button")
+                    i.ri-delete-bin-line
