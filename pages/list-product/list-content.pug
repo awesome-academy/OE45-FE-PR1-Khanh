@@ -1,4 +1,5 @@
 mixin content
+    +breadcrumb-page(listproductBreadcrumb)
     .wrapper-list
         .container-sm.menu-list 
             .row 
@@ -54,17 +55,4 @@ mixin content
                         .container-sm.product__container
                             .row.product
                                 +productItem(productGrids)
-                    nav(aria-label="Page navigation example")
-                        ul.pagination
-                            li.page-item
-                                +link().page-link Trang trước
-                            li.page-item.active
-                                +link().page-link 1
-                            li.page-item
-                                +link().page-link 2
-                            li.page-item
-                                +link().page-link 3
-                            li.page-item
-                                +link().page-link 4
-                            li.page-item
-                                +link().page-link Trang cuối
+                    +pagination(paginations)
