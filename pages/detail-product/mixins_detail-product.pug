@@ -1,0 +1,69 @@
+mixin breadcrumb-page(nameBreadcrumb)
+    nav(aria-label="breadcrumb")#breadcrumb
+            ol.breadcrumb
+                li.breadcrumb-item
+                    +link Home
+                each items in nameBreadcrumb
+                    li.breadcrumb-item.active(aria-current="page")= items
+
+mixin imgDetail(imgDetail)
+    each item in imgDetail
+        .img-parent
+            +img(item.src, item.alt)
+        .img-child 
+            each items in item.imgChild 
+                +img(items.src, items.alt)
+
+mixin social(itemSocials)
+    each item in itemSocials
+        +link()
+            i(class = item.icon)
+            span= item.label
+
+mixin tabsBtn(tabsBtn)
+    nav 
+        .nav.nav-tabs#nav-tab(role="tablist")
+            each item in tabsBtn
+                button.nav-link(id= item.id data-bs-toggle="tab" data-bs-target= `#${item.controls}` type="button" role="tab" aria-controls= item.controls aria-selected= item.selected)= item.nameBtn
+
+mixin contentTabs(contentTabs, numTab)
+    each item in contentTabs
+        .tab-pane.fade(id= item.id class= item.class role="tabpanel" aria-labelledby= item.label)
+            if numTab == 1
+                each items in item.contentShort
+                    span= items
+                p= item.contentLong
+            if numTab == 3
+                each items in item.content
+                    +link()
+                        p= items
+            if block
+                block
+
+mixin comment(comment)
+    section.gradient-custom
+        .container.my-5
+            .row.d-flex
+                .col-md-12
+                    .card
+                        .card-body.p-4
+                            h4.text-center.mb-4.pb-2 Bình luận (3)
+                            .row
+                                .col
+                                    each item in comment
+                                        .d-flex.flex-start.mb-5
+                                            +img(item.src, item.alt)(width= "65", height= "65").rounded-circle.shadow-1-strong.me-3
+                                            .flex-grow-1.flex-shrink-1
+                                                .d-flex.justify-content-between.align-items-center
+                                                    p.nameUser.mb-3= item.nameUser
+                                                    +link().reply
+                                                        i.ri-reply-line
+                                                        span Trả lời
+                                                p.small.mb-4= item.content
+                                                p.date-time= item.date
+                                                hr
+
+mixin rating(num)
+    each item in [1, 2, 3, 4, 5]
+        if item <= num
+            i.ri-star-fill
