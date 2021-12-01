@@ -1,0 +1,16 @@
+mixin detail-news-content
+    .container-sm.news__list-container.col-md-9
+        .row 
+            .news__list
+                +itemNewLists(detailNews)
+        +comment(comment)
+        .write-comment
+            .container-sm
+                h2.mb-5 Viết bình luận:
+                form(action="#", method="post") 
+                    .form-info.g-3
+                        +inputForm(newsInputs)
+                    .row.mt-3 
+                        .col-md-12
+                            +textareaForm(newsInputs)
+                    button(type="button").mt-3 GỬI
