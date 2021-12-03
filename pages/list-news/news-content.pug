@@ -3,7 +3,7 @@ mixin news-content
     .wrapper-list
         .container-sm.menu-list 
             .row
-                nav.col-md-3.col-sm-12
+                nav.col-md-3
                     .nav-category
                         h2.title Danh mục sản phẩm
                         hr
@@ -19,9 +19,9 @@ mixin news-content
                         hr
                         .nav__blogtag-list 
                             +blogTags(blogTags)
-                section.news-list.col-md-9.col-sm-12 
-                    .container-sm.news__list-container 
-                        .row 
+                block detail-news
+                    section.news-list.col-md-9
+                        .container-sm.news__list-container 
                             .news__list
                                 +itemNewLists(itemNewLists)
-                    +pagination(paginations)
+                        +pagination(paginations)
