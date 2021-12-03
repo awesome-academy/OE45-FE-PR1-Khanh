@@ -1,0 +1,15 @@
+mixin register-content
+    +breadcrumb-page(registerBreadcrumb)
+    section.register
+            personal-information
+                h2 Thông tin khách hàng
+                +inputForm(personalInfo)
+            .form-check
+                input.mb-0.form-check-input(type="checkbox" value="" id="flexCheckDefault")
+                label.form-check-label(for="flexCheckDefault") Đăng ký nhận thông tin qua email
+            .account-information
+                h2 Thông tin tài khoản
+                +inputForm(accountInfo)
+            .register-btn 
+                button(type="submit").btn-back Quay lại
+                button(type="submit").btn-register Đăng ký
