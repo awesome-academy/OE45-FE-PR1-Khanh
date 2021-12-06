@@ -1,0 +1,38 @@
+.login
+    max-width: 1140px
+    margin: 0 auto
+    @include fontRoboto
+    @include maxWidth($tablet)
+        padding: 0 20px
+    h2
+        @include text($font-size: 18px, $font-weight: 700)
+        color: $primary-color
+        text-transform: uppercase
+    &-control
+        @include flex($flex-direction: row, $align-items: center)
+        column-gap: 20px
+        .form-check
+            @include flex($flex-direction: row, $align-items: flex-end)
+            column-gap: 5px
+        a
+            color: $text-color
+            font-style: italic
+            text-decoration: underline
+            @include text($font-size: 12px)
+    &-btn
+        button
+            background-color: $primary-color
+            padding: 10px 25px
+            border: none
+            border-radius: 20px
+            color: $white-color
+    p
+        @include text($font-size: 14px, $line-height: 20px)
+        color: $text-color
+    input
+        margin-bottom: 20px
+    i
+        color: $label-color
+.form-check
+    input
+        margin: 0
