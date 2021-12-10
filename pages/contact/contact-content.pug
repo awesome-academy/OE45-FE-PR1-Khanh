@@ -1,0 +1,20 @@
+mixin contact-content
+    +breadcrumb-page(contactBreadcrumb)
+    .contact-map 
+        +img('assets/lienhe.png', 'lienhe')
+    section.contact-infomation 
+        .row 
+            .contact-form.col-md-6.col-sm-12 
+                h2.mb-5 Thông tin liên hệ
+                .col-md-6.mb-4.w-100
+                    +inputForm(inputContact)
+                    +textareaForm(inputContact)
+            .contact-information.col-md-6.col-sm-12 
+                +img('assets/logo-mobile.png')
+                p.mt-3.mb-3 DKT được thành lập với niềm đam mê và khát vọng thành công trong lĩnh vực. Thương mại điện tử. Chúng tối đã và đang khẳng định được vị trí hàng đầu bằng những sản phẩm
+                .contact-number.mb-3 
+                    i.ri-smartphone-line
+                    span Điện thoại: (84-4) 66.558.868
+                .contact-email 
+                    i.ri-mail-line
+                    span Email: info@dkt.com.vn
