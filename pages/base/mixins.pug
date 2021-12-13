@@ -294,3 +294,18 @@ mixin textareaForm(textareaForm)
             textarea(rows="3", type= item.type, name= item.id, id= item.id, autocomplete="off", placeholder= item.placeholder).form-control
         else if !item.label && item.id == 'field'
             textarea(rows="3", type= item.type, name= item.id, id= item.id, autocomplete="off", placeholder= item.placeholder).form-control
+
+mixin footerItem(itemFooter)
+    each item in itemFooter
+        .col-md-3.col-sm-12
+            h2.mb-5= item.title
+            .footer-text 
+                each itemChild in item.content
+                    +link()
+                        i.ri-arrow-drop-right-line
+                            span= itemChild
+
+mixin footerSupport(itemSupport)
+    each item in itemSupport
+        +link
+            span= item

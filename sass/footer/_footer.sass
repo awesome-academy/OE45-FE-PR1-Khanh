@@ -1,0 +1,89 @@
+.footer
+    background-color: $background-footer
+    color: $text-color
+    @include fontRoboto
+    @include text($font-size: 12px)
+    img
+        max-width: 100%
+        height: auto
+    &__container
+        @include maxWidth($tablet)
+            padding: 0 20px
+    h2
+        @include text($font-size: 14px, $font-weight: 700, $line-height: 20px)
+        text-transform: uppercase
+        @include maxWidth($mobile)
+            margin-bottom: 20px !important
+        margin-bottom: 20px
+    &__container
+        max-width: 1140px
+        margin: 0 auto
+    &-social
+        @include flex($flex-direction: row)
+        column-gap: 10px
+        @include text($font-size: 18px)
+        a
+            color: $text-color
+    &-input
+        @include flex($flex-direction: row, $justify-content: flex-end)
+        column-gap: 20px 
+        position: relative
+        @include maxWidth($mobile)
+            @include flex($flex-direction: column)
+        input
+            width: 490px
+            padding: 0 80px 0 20px
+            outline: none
+            height: 43px
+            @include maxWidth($mobile)
+                width: 100%
+        button
+            border: none
+            background-color: $primary-color
+            padding: 15px 15px
+            @include flex($flex-direction: row, $justify-content: center, $align-items: center)
+            @include position($position: absolute, $top: 1px, $right: 9px)
+            @include maxWidth($mobile)
+                top: 40px
+            i
+                color: $white-color
+    p
+        @include text($font-size: 12px, $line-height: 20px)
+    &-phone, .footer-mail
+        @include flex($flex-direction: row, $align-items: center)
+        column-gap: 5px
+        i
+            color: $primary-color
+        span
+            @include text($font-size: 12px, $line-height: 20px)
+    &-text
+        @include flex($flex-direction: column)
+        row-gap: 15px
+        a
+            color: $text-color
+        span
+            @include fontRoboto   
+            @include text($font-size: 12px)
+    &-last
+        @include flex($flex-direction: row, $justify-content: space-between)
+        @include maxWidth($mobile)
+            @include flex($flex-direction: column)
+            row-gap: 10px
+        .support
+            @include flex($flex-direction: row)
+            column-gap: 20px
+            span
+                @include text($font-size: 12px)
+                color: $text-color   
+        .pay 
+            @include flex($flex-direction: row)
+            column-gap: 10px
+            @include text($font-size: 18px)
+    &-coppyright
+        width: 100%
+        height: 50px
+        background-color: $background-coppyright
+        @include flex($flex-direction:row, $justify-content: center, $align-items: center)
+        span
+            @include text($font-size: 16px)
+            color: $white-color
