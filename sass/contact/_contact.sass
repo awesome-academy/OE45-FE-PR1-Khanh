@@ -1,0 +1,32 @@
+.contact-map
+    img
+        max-width: 100%
+        height: auto
+.contact-form
+    input
+        margin-bottom: 20px
+.contact-infomation
+    @include fontRoboto
+    max-width: 1140px
+    margin: 50px auto
+    @include maxWidth($tablet)
+        padding: 0 20px
+    h2
+        @include text($font-size: 18px, $font-weight: 700)
+        color: $primary-color
+        text-transform: uppercase
+    i
+        @include text($font-size: 12px)
+        color: $label-color
+    p
+        @include text($font-size: 14px, $line-height: 20px)
+        color: $text-color
+    .contact-number, .contact-email
+        @include flex($flex-direction: row, $align-items: center)
+        column-gap: 5px 
+        i
+            @include text($font-size:18px)
+            color: $primary-color
+        span
+            @include text($font-size: 14px)
+            color: $text-color
