@@ -1,0 +1,45 @@
+mixin footer 
+    section.footer 
+        .footer__container
+            .row.g-3.footer__head
+                .col-md-3.col-sm-12 
+                    h2.mb-2 Kênh thông tin từ chúng tôi
+                    .footer-social
+                        +link 
+                            i.ri-facebook-fill
+                        +link
+                            i.ri-twitter-fill
+                        +link
+                            i.ri-youtube-fill
+                        +link
+                            i.ri-vimeo-fill
+                .footer-input.col-md-9.col-sm-12 
+                    h2 Đăng ký nhận Email từ chúng tôi
+                    input(type="text")
+                    button(type="submit")
+                        i.ri-send-plane-line
+            hr
+            .row.g-3
+                .col-md-3.col-sm-12
+                    +img('assets/logo-mobile.png', 'logo') 
+                    p.mt-3.mb-3 Green Shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển
+                    .footer-phone 
+                        i.ri-phone-line
+                        span Điện thoại: (84-4) 66.558.868
+                    .footer-mail 
+                        i.ri-mail-line 
+                        span Email: info@dkt.com.vn
+                .col-md-9.col-sm-12 
+                    .row.g-3 
+                        +footerItem(footer)
+            hr
+            .footer-last.mb-3 
+                .support 
+                    +footerSupport(itemSupport)
+                .pay
+                    i.ri-bank-card-2-line
+                    i.ri-refund-line
+                    i.ri-secure-payment-line
+                    i.ri-money-euro-box-line
+        .footer-coppyright 
+            span Thiết kế bởi BizWeb@
